@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моя сторінка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #2c3e50;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+        }
+    </style>
 </head>
+
 <body>
     <!-- Навігація -->
     <nav>
@@ -19,43 +93,44 @@
     <!-- Про мене -->
     <section id="about">
         <h1>Про мене</h1>
-        <p>Про мене: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nam eius expedita hic explicabo voluptatibus repellendus deleniti veritatis neque, est cumque rem a sunt. Iste ea debitis illo sunt vel!
-
-            Освіта:Я навчаюсь на п'ятому курсі Львівського коледжу декоративного та ужиткового мистецтва імені Івана Труша на мистецькому факультеті.
-            
-            Моя спеціальність - Ювелірні вироби з металул. У рамках навчання вивчаю живопис, рисунок, роботу в матеріалі та історію мистецтв.
-            
-            Мої хоббі: В свій вільний час люблю грати на піаніно, слухати музику та гуляти.</p>
-        <img src="DALL·E 2024-11-20 19.58.05 - A simple and mystical image of the Sun depicted as a spiral. The design is comfortable and not overly complicated, resembling a vector style with smoo.webp" alt="Фото про мене"width="300" height="300">
+        <p><strong>Про мене:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nam eius expedita hic explicabo voluptatibus repellendus deleniti veritatis neque, est cumque rem a sunt. Iste ea debitis illo sunt vel!</p>
+        <p><strong>Освіта:</strong> Я навчаюсь на п'ятому курсі Львівського коледжу декоративного та ужиткового мистецтва імені Івана Труша на мистецькому факультеті. Моя спеціальність - <em>Ювелірні вироби з металу.</em></p>
+        <p><strong>Мої хоббі:</strong> В свій вільний час люблю грати на піаніно, слухати музику та гуляти.</p>
+        <img src="DALL·E 2024-11-20 19.58.05 - A simple and mystical image of the Sun depicted as a spiral. The design is comfortable and not overly complicated, resembling a vector style with smoo.webp" alt="Фото про мене">
     </section>
 
     <!-- Роботи -->
-<section id="portfolio">
-    <h2>Мої роботи</h2>
-     </ul>
-    <img src="photo_2024-11-20_18-09-07.jpg" alt="Приклад роботи 1">
-    <img src="photo_2024-11-20_18-09-09.jpg" alt="Приклад роботи 2">
-    <img src="photo_2024-11-20_18-09-10.jpg" alt="Приклад роботи 3">
-    <img src="photo_2024-11-20_18-09-08.jpg" alt="Приклад роботи 4">
-    <img src="photo_2024-11-20_18-09-08 (2).jpg" alt="Приклад роботи 5">
-</section>
-
+    <section id="portfolio">
+        <h2>Мої роботи</h2>
+        <p>Ось деякі з моїх робіт:</p>
+        <ul>
+            <li><img src="photo_2024-11-20_18-09-07.jpg" alt="Приклад роботи 1"></li>
+            <li><img src="photo_2024-11-20_18-09-09.jpg" alt="Приклад роботи 2"></li>
+            <li><img src="photo_2024-11-20_18-09-10.jpg" alt="Приклад роботи 3"></li>
+            <li><img src="photo_2024-11-20_18-09-08.jpg" alt="Приклад роботи 4"></li>
+            <li><img src="photo_2024-11-20_18-09-08 (2).jpg" alt="Приклад роботи 5"></li>
+        </ul>
+    </section>
 
     <!-- Контакти -->
     <section id="contacts">
         <h2>Контакти</h2>
         <p>Напишіть мені: <strong>itlifidyyzifvjo@gmail.com</strong></p>
-        <img src="TARDISx.png"  alt="Іконка контактів">
+        <p>Іконка контактів:</p>
+        <img src="TARDISx.png" alt="Іконка контактів">
     </section>
 
     <!-- Блог -->
     <section id="blog">
         <h2>Мій блог</h2>
+        <p>Ось що я писала:</p>
         <ol>
             <li>Сьогодні був хороший день, спробувала себе у веб-дизайні</li>
-            
+            <li>Моя нова стаття про мистецтво ювелірних виробів</li>
         </ol>
+        <p>Деталі можна знайти у моєму блозі.</p>
         <img src="https://via.placeholder.com/300" alt="Фото блогу">
     </section>
 </body>
+
 </html>
