@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя сторінка</title>
+    <style>
+        /* Базові стилі */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('фон1.jpg'); /* Фонове зображення */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+        }
+
+        /* Навігація */
+        nav {
+            background-color: rgba(44, 62, 80, 0.95);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: white;
+            color: #2c3e50;
+            border-radius: 5px;
+        }
+
+        /* Секції */
+        section {
+            padding: 50px;
+            margin: 30px auto;
+            max-width: 1200px;
+            background: #2e4053;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: white;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 25px;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        /* Про мене */
+        .about-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 300px;
+        }
+
+        .about-caption {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            color: white;
+        }
+
+        /* Портфоліо */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        .close-modal:hover {
+            background: white;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Навігація -->
+    <nav>
+        <ul>
+            <li><a href="#about">Про мене</a></li>
+            <li><a href="#education">Освіта</a></li>
+            <li><a href="#portfolio">Мої роботи</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <!-- Про мене -->
+    <section id="about">
+        <h1>Про мене</h1>
+        <p><strong>Привіт!</strong> Мене звати Варвара Порецька і я студентка 5-курсу Львівського коледжу декоративного та ужиткового мистецтва ім.І.Труша. У вільний час я захоплююсь <em>музикою</em>, <em>живописом</em> та створенням ювелірних виробів.</p>
+        <img src="cat-kitten-red-cat-the-sun.jpg" alt="Фото про мене" class="about-image">
+        <div class="about-caption">Це я, Варвара Порецька!</div>
+    </section>
+
+    <!-- Освіта -->
+    <section id="education">
+        <h2>Освіта</h2>
+        <p>Я навчаюсь у Львівському коледжі декоративного та ужиткового мистецтва ім. Івана Труша. Моя спеціальність - <em>Ювелірні вироби</em>.</p>
+        <img src="колледж.png" alt="Будівля коледжу" style="max-width: 400px; display: block; margin: 0 auto;">
+    </section>
+
+    <!-- Портфоліо -->
+    <section id="portfolio">
+        <h2>Мої роботи</h2>
+        <p>Нижче ви можете побачити деякі з моїх робіт.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" onclick="openModal('photo_2024-11-20_18-09-07.jpg')">
+                <img src="photo_2024-11-20_18-09-07.jpg" alt="Робота 1">
+            </div>
+            <div class="portfolio-item" onclick="openModal('photo_2024-11-20_18-09-09.jpg')">
+                <img src="photo_2024-11-20_18-09-09.jpg" alt="Робота 2">
+            </div>
+            <div class="portfolio-item" onclick="openModal('photo_2024-11-20_18-09-10.jpg')">
+                <img src="photo_2024-11-20_18-09-10.jpg" alt="Робота 3">
+            </div>
+            <div class="portfolio-item" onclick="openModal('photo_2024-11-20_18-09-08.jpg')">
+                <img src="photo_2024-11-20_18-09-08.jpg" alt="Робота 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <a href="javascript:void(0)" class="close-modal" onclick="closeModal()">&times;</a>
+        <img id="modal-image" src="" alt="Модальне зображення">
+    </div>
+
+    <!-- Контакти -->
+    <section id="contacts">
+        <h2>Контакти</h2>
+        <p>Напишіть мені: <strong>itlifidyyzifvjo@gmail.com</strong></p>
+        <img src="TARDISx.png" alt="Контактна іконка" style="max-width: 100px; display: block; margin: 0 auto;">
+    </section>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
